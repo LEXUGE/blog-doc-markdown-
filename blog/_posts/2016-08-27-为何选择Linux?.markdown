@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "为何选择Linux?"
 date:   2016-08-27 09:35
 categories: jekyll update

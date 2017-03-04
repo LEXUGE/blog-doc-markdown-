@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Python有道词典终端版"
 date:   2017-01-30 15:17
 categories: jekyll update

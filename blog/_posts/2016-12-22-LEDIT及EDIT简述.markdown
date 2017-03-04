@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "LEDIT及EDIT简述"
 date:   2016-12-22 19:40
 categories: jekyll update

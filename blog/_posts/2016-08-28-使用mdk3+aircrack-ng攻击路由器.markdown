@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "使用mdk3+aircrack-ng攻击路由器"
 date:   2016-08-28 11:47
 categories: jekyll update

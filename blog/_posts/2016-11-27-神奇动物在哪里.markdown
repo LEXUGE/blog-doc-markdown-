@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "神奇动物在哪里"
 date:   2016-11-27 13:43
 categories: jekyll update

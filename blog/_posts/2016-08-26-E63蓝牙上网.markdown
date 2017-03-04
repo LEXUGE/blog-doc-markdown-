@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "E63蓝牙上网"
 date:   2016-08-26 14:04
 categories: jekyll update

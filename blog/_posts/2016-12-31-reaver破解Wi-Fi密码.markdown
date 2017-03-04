@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "reaver破解Wi-Fi密码"
 date:   2016-12-31 17:35
 categories: jekyll update

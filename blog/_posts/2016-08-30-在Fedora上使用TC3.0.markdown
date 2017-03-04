@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "在Fedora上使用TC3.0"
 date:   2016-08-30 08:41
 categories: jekyll update

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "ArchLinux下安装QQ"
 date:   2016-11-06 15:45
 categories: jekyll update

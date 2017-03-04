@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "《监视者》影评"
 date:   2016-09-30 19:29
 categories: jekyll update

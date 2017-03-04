@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: default
 title: About
 permalink: /about/
 ---
-
 这是我的一个个人BLOG，我是一名Geek，会在这里发布一些技术教程类的文章，当然也不乏一些生活感悟之类的日记:-)
 目前我使用Fedora，已经转战Linux了。至少在2016年，我还是一名初一生，BLOG也是2016年建立的。  
 我会坚守BLOG，记录自己成长路上的点点滴滴。  
@@ -18,10 +17,14 @@ permalink: /about/
 [Hiisi1.6.3](/download/Hiisi1.6.3.rar)  
 [RSA-tool](/download/RSA-tool.zip)  
 [cmder](/download/cmder_mini.zip)  
-[my-ca](/download/my-ca.crt)
+[yky-pubkey](/download/yky-pubkey.asc)  
+[VMware Player-Hackintosh组合包](/download/WMware-Hackintosh.zip)  
        
-**珍藏音乐:**  
-- *流行音乐:*  
+![](/image/耳机图标.ico)  **| Music Zone**  
+- **Pop Music:**  
+Try: <audio src="/music/Try.mp3" controls="controls" loop="loop"></audio>  
+The Sound Of Silence: <audio src="/music/The Sound Of Silence.mp3" controls="controls" loop="loop"></audio>  
+I knew you were trouble: <audio src="/music/I knew you were trouble.mp3" controls="controls" loop="loop"></audio>  
 Sugar: <audio src="/music/Sugar.mp3" controls="controls" loop="loop"></audio>  
 What Makes You Beautiful: <audio src="/music/What Makes You Beautiful.mp3" controls="controls" loop="loop"></audio>  
 Moves Like Jagger: <audio src="/music/Moves Like Jagger.mp3" controls="controls" loop="loop"></audio>  
@@ -35,7 +38,7 @@ Pop Danthology 2012: <audio src="/music/Pop Danthology 2012.mp3" controls="contr
 The Greatest: <audio src="/music/The Greatest.mp3" controls="controls" loop="loop"></audio>  
 Immortals: <audio src="/music/Immortals.mp3" controls="controls" loop="loop"></audio>  
 See You Again: <audio src="/music/See You Again.mp3" controls="controls" loop="loop"></audio>  
-- *哈迷专区:*  
+- **哈迷专区:**  
 Main Titles - Fantastic Beasts and Where To Find Them: <audio src="/music/Main Titles - Fantastic Beasts and Where To Find Them.mp3" controls="controls" loop="loop"></audio>  
 Hedwig's Theme: <audio src="/music/Hedwig's Theme.mp3" controls="controls" loop="loop"></audio>  
   

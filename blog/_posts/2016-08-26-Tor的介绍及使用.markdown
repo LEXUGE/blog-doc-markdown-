@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Tor的介绍及使用"
 date:   2016-08-26 8:59
 categories: jekyll update

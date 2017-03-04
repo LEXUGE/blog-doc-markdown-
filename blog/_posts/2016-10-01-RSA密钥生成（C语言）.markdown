@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "RSA密钥生成（C语言）"
 date:   2016-10-01 09:43
 categories: jekyll update

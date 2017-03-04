@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "ev3dev蓝牙联网"
 date:   2016-11-13 15:01
 categories: jekyll update

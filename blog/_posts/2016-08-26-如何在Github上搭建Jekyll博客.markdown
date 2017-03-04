@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "如何在Github上搭建Jekyll博客"
 date:   2016-08-26 14:24
 categories: jekyll update

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Fedora 启动U盘制作和安装教程"
 date:   2016-08-26 7:45
 categories: jekyll update

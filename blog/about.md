@@ -19,9 +19,12 @@ permalink: /about/
 [cmder](/download/cmder_mini.zip)  
 [yky-pubkey](/download/yky-pubkey.asc)  
 [VMware Player-Hackintosh组合包](/download/WMware-Hackintosh.zip)  
+[Trans-中英互译Python脚本](/download/trans.py)  
+[XCH-化学方程式配平程序](/download/XCH.zip)  
        
 ![](/image/耳机图标.ico)  **| Music Zone**  
 - **Pop Music:**  
+We Don't Talk Anymore: <audio src="/music/We Don't Talk Anymore.mp3" controls="controls" loop="loop"></audio>  
 Try: <audio src="/music/Try.mp3" controls="controls" loop="loop"></audio>  
 The Sound Of Silence: <audio src="/music/The Sound Of Silence.mp3" controls="controls" loop="loop"></audio>  
 I knew you were trouble: <audio src="/music/I knew you were trouble.mp3" controls="controls" loop="loop"></audio>  

@@ -4,6 +4,7 @@ title:  "为你，千千万万遍。"
 date:   2017-02-23 18:17
 categories: jekyll update
 ---
+**LEXUGE原创**，使用[GNU FDL协议](https://www.gnu.org/licenses/fdl.txt)发布  
 ![](/image/追风筝的人.jpg)  
   
   

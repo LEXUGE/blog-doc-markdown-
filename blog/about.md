@@ -17,7 +17,7 @@ permalink: /about/
 [Hiisi1.6.3](/download/Hiisi1.6.3.rar)  
 [RSA-tool](/download/RSA-tool.zip)  
 [cmder](/download/cmder_mini.zip)  
-[yky-pubkey](/download/yky-pubkey.asc)  
+[yky-pubkey](/download/public.key)  
 [VMware Player-Hackintosh组合包](/download/WMware-Hackintosh.zip)  
 [Trans-中英互译Python脚本](/download/trans.py)  
 [XCH-化学方程式配平程序](/download/XCH.zip)  

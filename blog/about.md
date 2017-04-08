@@ -10,7 +10,7 @@ permalink: /about/
 2016/9/17  
 - 这里提供一些软件的资源下载：  
 [C2Doom](/download/C2Doom.rar)  
-[EDIT(程序+源代码+说明)](/download/EDIT.rar)  
+[EDIT(程序+源代码)](/download/EDIT.zip)  
 [LEDIT(程序+源代码)](/download/LEDIT.zip)  
 [TC3.0](/download/TC3.0.exe)  
 [GAMEOX（程序+源代码）](/download/GAMEOX.zip)  

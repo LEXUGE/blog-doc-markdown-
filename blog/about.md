@@ -24,6 +24,8 @@ permalink: /about/
        
 ![](/image/耳机图标.ico)  **| Music Zone**  
 - **Pop Music:**  
+Counting Stars: <audio src="/music/Counting Stars.mp3" controls="controls" loop="loop"></audio>  
+Maps: <audio src="/music/Maps.mp3" controls="controls" loop="loop"></audio>  
 We Don't Talk Anymore: <audio src="/music/We Don't Talk Anymore.mp3" controls="controls" loop="loop"></audio>  
 Try: <audio src="/music/Try.mp3" controls="controls" loop="loop"></audio>  
 The Sound Of Silence: <audio src="/music/The Sound Of Silence.mp3" controls="controls" loop="loop"></audio>  
@@ -36,14 +38,11 @@ Alone: <audio src="/music/Alone.mp3" controls="controls" loop="loop"></audio>
 夜空中最亮的星: <audio src="/music/夜空中最亮的星.mp3" controls="controls" loop="loop"></audio>  
 蓝莲花: <audio src="/music/蓝莲花.mp3" controls="controls" loop="loop"></audio>  
 平凡之路: <audio src="/music/平凡之路.mp3" controls="controls" loop="loop"></audio>  
-Beat It: <audio src="/music/Beat It.mp3" controls="controls" loop="loop"></audio>  
 Pop Danthology 2012: <audio src="/music/Pop Danthology 2012.mp3" controls="controls" loop="loop"></audio>  
 The Greatest: <audio src="/music/The Greatest.mp3" controls="controls" loop="loop"></audio>  
 Immortals: <audio src="/music/Immortals.mp3" controls="controls" loop="loop"></audio>  
 See You Again: <audio src="/music/See You Again.mp3" controls="controls" loop="loop"></audio>  
-- **哈迷专区:**  
-Main Titles - Fantastic Beasts and Where To Find Them: <audio src="/music/Main Titles - Fantastic Beasts and Where To Find Them.mp3" controls="controls" loop="loop"></audio>  
-Hedwig's Theme: <audio src="/music/Hedwig's Theme.mp3" controls="controls" loop="loop"></audio>  
+
   
   
   

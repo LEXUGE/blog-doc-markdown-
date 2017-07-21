@@ -4,15 +4,13 @@ title:  "为你，千千万万遍。"
 date:   2017-02-23 18:17
 categories: jekyll update
 ---
-**LEXUGE原创**，使用[GNU FDL协议](https://www.gnu.org/licenses/fdl.txt)发布  
-![](/image/追风筝的人.jpg)  
-  
-  
-  
+
+
+
 The Sound Of Silence: <audio src="/music/The Sound Of Silence.mp3" controls="controls" loop="loop"></audio>  
-  
-  
-  
+
+
+
 灿烂千阳之中，你，我都追随着那只风筝。 ——题记  
 时间并不会冲去过去的事情，不论人们怎么说，这一定不会，也永远不会。往事，过错会不断地在你的脑海里重现，如同梦魇，挥之不去，无法逃离。  
 人，就是这样。  

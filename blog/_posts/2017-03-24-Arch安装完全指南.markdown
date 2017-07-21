@@ -9,15 +9,15 @@ categories: jekyll update
 [Arch下载页面](https://www.archlinux.org/download/)  
 [Arch Wiki安装教程](https://wiki.archlinux.org/index.php/Installation_guide)  
 ![](/image/Arch桌面.png)  
-  
-  
+
+
 ![](/image/Arch-scr.png)  
 > Arch Linux, a lightweight and flexible Linux® distribution that tries to Keep It Simple.  
 
 Arch是我最喜欢的Linux滚动发行版，在我心中的地位基本与Fedora一致。新手在安装Arch时会遇到大量的困难，当然，对于新手，我也不推荐你来使用Arch。事实上，只要你有过半年或几个月以上的Linux使用经验，你就一定能够顺利安装完成Arch，整个安装过程中你最大的问题是克服终端操作的心理障碍。  
 下面，我们就开始吧！  
-  
-  
+
+
 1. 安装之前：  
 首先，我们在[Arch下载页面](https://www.archlinux.org/download/)下载Arch的Live CD并烧录进U盘。开机U盘启动Live CD。  
 Arch的安装少不了网络。所以，在安装之前我们需要进行联网。  
@@ -46,9 +46,9 @@ dhcpcd wlp2s0
 将SSID和password替换成你的Wi-Fi名称和密码。  
 输入```chmod a+x wifi.sh```并执行```./wifi.sh```来启动无线网络  
 使用ping来验证网络：```ping -c 3 archlinux.org```  
-  
-  
-  
+
+
+
 
 2. 磁盘分区与挂载：  
 为了较为简便地进行分区，我们选用```cfdisk```来进行分区。  
@@ -61,7 +61,7 @@ dhcpcd wlp2s0
 重启完毕后执行：
 ```
 mkfs.ext4 /dev/sda1
-mkfs.ect4 /dev/sda3 
+mkfs.ect4 /dev/sda3
 mkswap /dev/sda2
 ```
 这样我们就格式化完毕了  
@@ -74,8 +74,8 @@ mount /dev/sda1 /mnt/boot
 ```
 这样，我们就挂载上了分区  
 至此，这部分完毕  
-  
-  
+
+
 3. 安装ArchLinux：  
 为了加速安装，我们添加清华大学的软件源，使用这条命令：  
 ```nano /etc/pacman.d/mirrorlist```  
@@ -96,8 +96,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 切记是sda而不是sda1  
 如此，安装彻底完成，现在我们可以重启了！  
-  
-  
+
+
 4. 配置ArchLinux：  
 - 配置语言环境  
 使用nano编辑器编辑配置文件：```nano /etc/locale.gen```（Ctrl+v向下翻页，Ctrl+y向上翻页）  
@@ -126,8 +126,8 @@ ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 将wheel用户组的权限注释去除  
 按shift+zz保存退出  
 使用```su name```切换用户并使用```sudo reboot```测试sudo  
-  
-  
+
+
 5. 安装桌面：  
 第一步安装xorg：  
 ```sudo pacman -Syu xorg xorg-xinit xorg-utils dbus```  
@@ -149,9 +149,9 @@ sudo pacman -Syu gdm
 sudo systemctl enable gdm
 sudo systemctl start gdm
 ```
-  
-  
-  
+
+
+
 6. 环境设置：  
 - 字体  
 使用```pacman -Ss font```搜索你喜欢的字体  
@@ -167,5 +167,5 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ```
-  
+
 祝你成功！  

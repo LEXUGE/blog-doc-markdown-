@@ -4,7 +4,6 @@ title:  "XCH - 化学方程式配平程序"
 date:   2017-03-12 16:24
 categories: jekyll update
 ---
-技术方法由**LEXUGE原创**，使用[GNU FDL协议](https://www.gnu.org/licenses/fdl.txt)发布  
 本软件遵守[GPL协议](http://www.gnu.org/licenses/gpl.txt)发布  
 本程序可以用来进行化学方程式配平，下载地址见About页面  
 下面将介绍软件使用的核心算法：  
@@ -13,7 +12,7 @@ categories: jekyll update
 下面我们来看几组例子：  
 1. **H2O=H2+O2** 化学方程式配平：  
 ```
-[lexuge@localhost XCH]$ ./XCH 
+[lexuge@localhost XCH]$ ./XCH
 XCH - Chemical Equation Balancer
 By LEXUGE
 Copyright (2017-2017) LEXUGE
@@ -28,12 +27,12 @@ The software is using GPL(http://www.gnu.org/licenses/gpl.txt)
 100 //最大暴力搜索范围
 ------Output------
 各分子式系数分别为：
-2 2 1 
+2 2 1
 ```
 
 2. **As2O3+Zn+HCl=AsH3+ZnCl2+H2O** 化学方程式配平：  
 ```
-[lexuge@localhost XCH]$ ./XCH 
+[lexuge@localhost XCH]$ ./XCH
 XCH - Chemical Equation Balancer
 By LEXUGE
 Copyright (2017-2017) LEXUGE
@@ -51,7 +50,5 @@ The software is using GPL(http://www.gnu.org/licenses/gpl.txt)
 50
 ------Output------
 各分子式系数分别为：
-1 6 12 2 6 3 
+1 6 12 2 6 3
 ```
-
-

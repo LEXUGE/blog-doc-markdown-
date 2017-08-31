@@ -9,7 +9,15 @@ permalink: /about/
 编程——编织梦想，成就未来！  
 2016/9/17  
 转战到Arch Linux，并投身于Fedora社区的翻译工作以及Arch Wiki的翻译工作。  
-2017/5/12  
+2017/5/12
+
+- 这是我的GPG公钥指纹：  
+```
+pub   rsa4096 2017-08-01 [SC]
+      E8D2 8E75 0C28 D60D 8FBD  827E BAC0 5026 97DC AB44
+uid           [ 绝对 ] LEXUGE (Ying Kanyang-Archlinux user) <LEXUGEyky@outlook.com>
+sub   rsa4096 2017-08-01 [E]
+```  
 - 这里提供一些软件的资源下载：  
 [C2Doom](/download/C2Doom.rar)  
 [EDIT(程序+源代码)](/download/EDIT.zip)  
@@ -20,7 +28,7 @@ permalink: /about/
 [Hiisi1.6.3](/download/Hiisi1.6.3.rar)  
 [RSA-tool](/download/RSA-tool.zip)  
 [cmder](/download/cmder_mini.zip)  
-[yky-pubkey](/download/public.key)  
+[yky-pubkey](/download/public-yky.asc)  
 [VMware Player-Hackintosh组合包](/download/WMware-Hackintosh.zip)  
 [Trans-中英互译Python脚本](/download/trans.py)  
 [XCH-化学方程式配平程序](/download/XCH.zip)  
@@ -28,64 +36,64 @@ permalink: /about/
 
 ![](/image/耳机图标.ico)  **| Music Zone**  
 - **Coldplay:**  
-&emsp;&emsp;Hymn For The Weekend [Remix]: <audio src="/music/Hymn For The Weekend.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;Hymn For The Weekend [Remix]: <audio src="/music/Hymn For The Weekend.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **Maroon 5:**  
-&emsp;&emsp;Maps: <audio src="/music/Maps.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;Sugar: <audio src="/music/Sugar.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;Moves Like Jagger: <audio src="/music/Moves Like Jagger.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;Maps: <audio src="/music/Maps.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;Sugar: <audio src="/music/Sugar.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;Moves Like Jagger: <audio src="/music/Moves Like Jagger.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **One Direction:**  
-&emsp;&emsp;What Makes You Beautiful: <audio src="/music/What Makes You Beautiful.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;What Makes You Beautiful: <audio src="/music/What Makes You Beautiful.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **Alan Walker:**  
-&emsp;&emsp;Fade: <audio src="/music/Fade.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;Alone: <audio src="/music/Alone.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;Fade: <audio src="/music/Fade.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;Alone: <audio src="/music/Alone.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **Taylor Swift:**  
-&emsp;&emsp;I knew you were trouble: <audio src="/music/I knew you were trouble.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;I knew you were trouble: <audio src="/music/I knew you were trouble.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **Simon & Garfunkel:**  
-&emsp;&emsp;The Sound Of Silence: <audio src="/music/The Sound Of Silence.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;The Sound Of Silence: <audio src="/music/The Sound Of Silence.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **Chinese Pop Music:**  
-&emsp;&emsp;蓝莲花: <audio src="/music/蓝莲花.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;平凡之路: <audio src="/music/平凡之路.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;No Fear In My Heart: <audio src="/music/No Fear In My Heart.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;蓝莲花: <audio src="/music/蓝莲花.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;平凡之路: <audio src="/music/平凡之路.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;No Fear In My Heart: <audio src="/music/No Fear In My Heart.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **Pop music:**  
-&emsp;&emsp;The Greatest: <audio src="/music/The Greatest.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;Immortals: <audio src="/music/Immortals.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;See You Again: <audio src="/music/See You Again.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;Dream It Possible: <audio src="/music/Dream It Possible.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;Try Everything: <audio src="/music/Try Everything.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;We Are Young: <audio src="/music/We Are Young.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;The Greatest: <audio src="/music/The Greatest.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;Immortals: <audio src="/music/Immortals.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;See You Again: <audio src="/music/See You Again.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;Dream It Possible: <audio src="/music/Dream It Possible.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;Try Everything: <audio src="/music/Try Everything.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;We Are Young: <audio src="/music/We Are Young.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **Guardians of the Galaxy原声精选:**  
-&emsp;&emsp;Mr. Blue Sky: <audio src="/music/Guardians of the Galaxy/Mr. Blue Sky.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;The Chain: <audio src="/music/Guardians of the Galaxy/The Chain.mp3" controls="controls" loop="loop"></audio>  
-&emsp;&emsp;My Sweet Lord: <audio src="/music/Guardians of the Galaxy/My Sweet Lord.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;Mr. Blue Sky: <audio src="/music/Guardians of the Galaxy/Mr. Blue Sky.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;The Chain: <audio src="/music/Guardians of the Galaxy/The Chain.mp3" controls="controls" loop="loop" preload="meta"></audio>  
+&emsp;&emsp;My Sweet Lord: <audio src="/music/Guardians of the Galaxy/My Sweet Lord.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 
 
 
 - **纯音乐：**  
-&emsp;&emsp;A First Star: <audio src="/music/A First Star.mp3" controls="controls" loop="loop"></audio>  
+&emsp;&emsp;A First Star: <audio src="/music/A First Star.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 <br>
 **上述所有资源及音乐均仅供学习交流,不得传播,如有侵权，请告知LEXUGE后删除**
 

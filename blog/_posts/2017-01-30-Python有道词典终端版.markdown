@@ -3,13 +3,15 @@ layout: default
 title:  "Python有道词典终端版"
 date:   2017-01-30 15:17
 categories: jekyll update
+tags: [Python,Linux,编程]
 ---
 为提高作业工作效力，我运用有道词典API与Python编写了一个小程序  
 输入英文，显示各种解释，直到输入```lexuge```退出  
+
 源代码：  
 ```python
 #!/usr/bin/env python  
-# -- coding: UTF-8 -- 
+# -- coding: UTF-8 --
 import codecs
 import re  
 import urllib2  
@@ -26,24 +28,24 @@ class Youdao:
         self.url = 'http://fanyi.youdao.com/openapi.do'  
         self.key = 'API KEY'   
         self.keyfrom = 'keyfrom'  
-  
+
     def get_translation(self,words):  
         url = self.url + '?keyfrom=' + self.keyfrom + '&key='+self.key + '&type=data&doctype=json&version=1.1&q=' + quote(str(words))  
         result = urllib2.urlopen(url).read()   
         json_result = json.loads(result)  
-        try : 
+        try :
             json_result2 = json_result["basic"]
-           
+
         except :
             pass    
         try :
             json_result3 = json_result2["uk-phonetic"]
-       
+
         except :
-            pass 
+            pass
         try :
             json_result = json_result["translation"]
-      
+
         except :
             pass
         for i in json_result:  
@@ -52,12 +54,12 @@ class Youdao:
             print u'英式发音:'+json_result3
         except :
             pass
-        try : 
+        try :
             print u'解释:'+json_result2["explains"][0]  
         except :
             pass
-    
-  
+
+
 youdao = Youdao()  
 while True:
     print '\n'

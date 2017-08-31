@@ -3,6 +3,7 @@ layout: default
 title:  "E63蓝牙上网"
 date:   2016-08-26 14:04
 categories: jekyll update
+tags: [计算机技巧]
 ---
 >对于国行的E63来说，并不配备有Wi-Fi功能，所以，就得近肯能的使用其他的
 免费数据连接来代替这一功能，其中最棒的选择就是Bluetooth连接。但是，Bluetooth连接
@@ -22,6 +23,7 @@ E63  --->  笔记本  --->  Internet
 E63  <---  笔记本  <---  Internet
 
 思路就是这样，那么，该如何实现呢？
+
 以Windows为例，有以下教程：
 1. 下载Hiisi 1.6.3 （在文章末尾，这是Bluetooth代理套件，有客户端和服务端）
 2. 下载并安装JRE（Java运行环境），已有的可跳过本步骤，在CMD中输入java –version
@@ -69,5 +71,3 @@ E盘安装（注意！！！安装时一定先运行hiisi.JAD,而不是JAR！)
 
 出现断线情况可按照13步检测并重启
 By LEXUGE
-
-

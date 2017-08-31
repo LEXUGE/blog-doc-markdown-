@@ -3,7 +3,10 @@ layout: default
 title:  "BFS走迷宫"
 date:   2016-08-26 8:54
 categories: jekyll update
+tags: [算法,C]
 ---
+代码如下：
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>

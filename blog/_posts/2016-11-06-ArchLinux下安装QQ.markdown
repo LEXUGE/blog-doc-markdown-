@@ -3,6 +3,7 @@ layout: default
 title:  "ArchLinux下安装QQ"
 date:   2016-11-06 15:45
 categories: jekyll update
+tags: [Linux,计算机技巧]
 ---
 QQ一直是Linux用户的一个难题  
 今天我们就叫大家使用Longene WINE QQ来实现QQ的使用  
@@ -17,5 +18,3 @@ QQ一直是Linux用户的一个难题
 sh /opt/longene/qq/qq.sh
 ```
 帐号密码都能输入，不存在常规wine下安装qq 无法输入的问题，能正常聊天和文件传输，比较稳定！  
-  
-

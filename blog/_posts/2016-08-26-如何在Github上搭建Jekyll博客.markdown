@@ -3,6 +3,7 @@ layout: default
 title:  "如何在Github上搭建Jekyll博客"
 date:   2016-08-26 14:24
 categories: jekyll update
+tags: [Linux,计算机技巧]
 ---
 >Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。
 
@@ -53,4 +54,3 @@ sudo git push
 请将文章写在_posts文件夹下
 
 By LEXUGE
-

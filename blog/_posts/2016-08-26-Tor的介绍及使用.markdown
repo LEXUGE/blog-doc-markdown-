@@ -3,6 +3,7 @@ layout: default
 title:  "Tor的介绍及使用"
 date:   2016-08-26 8:59
 categories: jekyll update
+tags: [网络]
 ---
 >Tor究竟是如何运行的呢？其实很简单。你用Tor client（客户端）发送一个多层加密网络请求，
 随机指向一台Tor node（节点）帮你传送到目标主机上。node把这个请求的最外层解密，

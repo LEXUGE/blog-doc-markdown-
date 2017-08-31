@@ -3,9 +3,9 @@ layout: default
 title:  "幕后 序章"
 date:   2017-07-03 19:41
 categories: jekyll update
+tags: [幕后系列,随笔]
 ---
-<h1>幕后 序章</h1>
-A First Star: <audio src="/music/A First Star.mp3" controls="controls" loop="loop"></audio>  
+A First Star: <audio src="/music/A First Star.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 <br>
 <hr>
 <br>
@@ -24,6 +24,7 @@ GN-z11星系《宇宙》控制中心物理分部的工作人员正在紧张地�
 《宇宙》，最初的设计目的仅仅是为了测试超级计算机的最大性能。然而随着项目的发展，GN人渐渐发现，这个项目派生出了各种学科分支，似乎还有助于研究GN人所处的世界。这个巨大的项目很快得到了GNR-Gov（GN Republic Goverment,GN共和国政府）的支持，因为在其中可以测试许多有风险的行为，而”人类“”就被作为GN人在《宇宙》系统中的映射，是GN人的早期文明版本。只要GN世界中的计算机的运算速度进一步加快，GN人还可以很快地利用《宇宙》来预测GN人的未来……  
 地球时间AM 8:00左右，伽利略准备开始他的实验。经过物理分部的彻夜改动，物理引擎应该已经消除了这个BUG。这时，决定GN人命运，同时也是决定人类命运的历史性时刻到来了。  
 这一刻，伽利略在人类的注视下，也在GN人的注视下仍下了铁球，一个10磅，一个1磅。两个铁球同时着地了。人类发出了惊讶的感叹。  
+
 与此同时，控制中心的观察员也在密切观察者《宇宙》中比萨斜塔这个不起眼的地方的一举一动，Terminal（终端）上：
 ```
 《宇宙》 控制终端-信息显示

@@ -3,11 +3,8 @@ layout: default
 title:  "Jekyll配置指北"
 date:   2017-07-21 11:54
 categories: jekyll update
+tags: [网络,计算机技巧]
 ---
-<h1>Jekyll配置指北</h1>
-<br>
-<hr>
-<br>
 本站的每一处都可以见到原子效果动态背景，科技感十足。实际上，这是一个JS脚本。  
 以Jekyll的原生主题minima为例，我们进行配置。  
 1. 获取minima主题的绝对路径：  
@@ -17,6 +14,7 @@ categories: jekyll update
 bundle show minima
 ```  
 这会输出minima的绝对路径。  
+
 2. 获取配置好的主题：  
 [Jekyll-minima-科技感配置](/download/minima-2.1.zip)  
 下载好后，解压，将particles.js剪切到BLOG的根目录，并将剩下的整个配置文件夹替换原来的minima。  

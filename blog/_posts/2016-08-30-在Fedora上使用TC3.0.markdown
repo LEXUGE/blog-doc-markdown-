@@ -3,6 +3,7 @@ layout: default
 title:  "在Fedora上使用TC3.0"
 date:   2016-08-30 08:41
 categories: jekyll update
+tags: [Linux,计算机技巧]
 ---
 >Turbo C是美国Borland公司的产品，Borland公司是一家专门从事软件开发、研制的大公司。该公司相继推出了一套 Turbo系列软件, 如Turbo BASIC, Turbo Pascal, Turbo Prolog, 这些软件很受用户欢迎。  
 
@@ -19,6 +20,7 @@ mount c /home/{username}/TurboC3.0
 ```
 
 打开C:\  
+
 ```
 c:
 ```

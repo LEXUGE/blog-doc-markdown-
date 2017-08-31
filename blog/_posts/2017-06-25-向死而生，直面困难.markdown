@@ -3,10 +3,11 @@ layout: default
 title:  "向死而生，直面困难"
 date:   2017-06-25 10:05
 categories: jekyll update
+tags: [随笔]
 ---
 
 
-Try Everything: <audio src="/music/Try Everything.mp3" controls="controls" loop="loop"></audio>  
+Try Everything: <audio src="/music/Try Everything.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 <br>
 
 > 失败并非成功之母，但却是失败之父。掌握失败的规律，直面困难，这远比从失败中吸取教训要重要的多得多。

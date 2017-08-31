@@ -125,6 +125,16 @@
     </script>
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
+        <br>
+        {% if !page.title %}
+        <span class="date">{{ page.date |date:"%B %d, %Y"}}</span>
+        {% for tags in page.tags %}
+          <a href="/tags/#{{tags | url_encode}}">{{tags}}</a>
+        {% endfor %}
+        <br>
+        <hr>
+        <br>
+        {% endif %}
         {{ content }}
       </div>
     </main>

@@ -1,0 +1,183 @@
+---
+layout: default
+title:  "DHT网络详解与DHT爬虫编写指南"
+date:   2017-07-22 14:52
+categories: jekyll update
+tags: [网络,编程,Python]
+---
+![](/image/DHT-Spider.png)  
+<hr>
+<br>
+[DHT-Spider项目主页](https://github.com/LEXUGE/DHT-Spider)  
+<br>
+1. 前言与背景：  
+随着网络的不断发展，我们中的大多数应该都下载过东西。如果你是一位电影爱好者或开源软件爱好者。那你一定使用过P2P下载。其中，主流的就是BT下载。  
+虽然，BT是P2P下载，但实际上，他并不是完全P2P的。它需要Tracker来通告节点，进行信息交换。所以，近年来的版权保护者与政府部门一直在封禁和打击Tracker。比较近的例子就是BT Sync的Tracker被封禁，导致0节点的惨剧。  
+那能否做到真正的P2P呢？当然可以，这需要的是DHT(Distributed Hash Table 分布式哈系表)来进行传输，这就是一种去中心化网络。每个加入这个网络的节点都要负责维护一张表格用来存储网络中其他人和资源的信息。任何一个节点的损坏都不足以对整个网络造成致命影响。  
+但是就是因为这种隐秘性的特点，资源也是不为人知。尽管目前有许多的BT分享网站(比如：海盗湾),但是他们的中心化意味着他们有随时被关停的可能。所以，拥有一个自己的DHT爬虫来进行资源嗅探是很重要的。
+<br>
+
+2. Kademlia网络：  
+- Kademlia一个分散式杂凑表实现的协议，专门为P2P计算机网络设计。  
+该网络规定了网络的结构与节点信息查询方式，节点与结点之间使用UDP进行通讯。每个结点都有一个唯一的身份标识(节点ID)，所有的节点都维护着一张覆盖网。网络上的文件散列与节点ID直接对应，表示着哪个节点存储着的文件和相关信息。  
+- Kademlia是用XOR进行节点距离的计算的。这样可以快速得到与目标节点(target)最近的节点(也有可能就是target),XOR的算法是bit位如果相等就记作0，否则为1，这意味着:  
+```
+1.当两个节点高位数值越为相同，XOR的结果也就越小，距离也就越小(这点上，无论是数学还是实际都是如此)。  
+2.具有反向对称性(A XOR B与B XOR A是相等的)
+3.XOR符合三角形的性质(即：a+b>c),这点对于路由表的寻路起着巨大作用
+```
+所以，XOR是作为距离计算的最佳算法。此外，XOR还能大幅增加寻路速度：可以保证每次与目标节点(target)靠近1 bit，这意味着：对于一个n位的节点ID，我们只需要至多log2(N)就可以找到目标节点。  
+- Kademlia的路由表采用的是列表-条目的方式。每个条目由节点ID对应其的IP:port或资源等。对于一个N位的节点ID，它会拥有N个K桶(也就是说每个桶只能有K个节点)。其中，第1个桶距离节点最远(也就是最高位与节点ID的最高位取反)，第二个就是第二位，以此类推。注意，这里的K不一定能存储下所有的节点(也就是说不是完全的)。这样的存储方式有别于二叉树，进行了很好的分类，这可以让FIND_NODE操作返回更为精确和快速：当无法找到一模一样节点ID时，直接返回可能节点(表中与目标ID最近的节点)所在K桶中的K个元素即可(因为K桶内的元素与可能节点最近，最有可能和可能节点一起存储有目标ID)。
+- Kademlia的节点查询(FIND_NODE)：
+```
+1.发起者在自己路由表中寻找与目标ID最近的K个节点发起FIND_NODE请求。
+2.接受者在接到以后，如果在自己的路由表中找到了目标节点，则返回该条目，否则返回可能节点所在K桶的K个节点条目
+3.发起者在自己发起请求的目标所在的K桶中更新返回结果，使K桶始终保持最优状态。
+4.发起者递归发起，直到找到目标节点。(如果没有发现节点更为接近的情况，那么就终止查询)  
+```
+- Kademlia加入网络：  
+Kademlia网络中的新节点加入需要一个引导节点作为介绍人。也就是说你必须先知道引导节点的IP:port。当你连接上引导节点时，新节点会用FIND_NODE自己的方式来使引导节点去询问自己的邻居节点。之后，邻居节点继续询问邻居节点，直到引导节点找到新节点。这一操作会一路对邻居的K桶进行刷新。
+
+
+
+
+2. KPPC协议：  
+这是一种基于Kademlia的改进协议，支持四种消息格式：
+```
+1.ping 检测节点是否可连接
+2.find_node 得到给定节点ID的对应信息(IP:port)
+3.get_peers 根据infohash提供对应信息(IP:port)
+4.announce_peer 宣布自己正在下载torrent文件
+```
+还需要注意，这里的消息包传送用的是bencode加密后的结果，关于bencode的加密方式：
+```
+1.string: 字符是以这种方式编码的: <字符串长度>:<字符串>
+如 hell: 4:hell
+2.integer: 整数是一这种方式编码的: i<整数>e
+如 1999: i1999e
+3.list: 列表是一这种方式编码的: l[数据1][数据2][数据3][…]e
+如列表 [hello, world, 101]：l5:hello5:worldi101ee
+4.dictionary: 字典是一这种方式编码的: d[key1][value1][key2][value2][…]e，其中 key 必须是 string 而且按照字母顺序排序
+如字典 {aa:100, bb:bb, cc:200}： d2:aai100e2:bb2:bb2:cci200ee
+```
+- KPPC消息包的基本元素：
+```
+1.t关键字: 每条消息都包含 t 关键字，它是一个代表了 transaction ID 的字符串。transaction ID 由请求节点产生，并且回复中要包含回显该字段(挑战-响应模型)，所以回复可能对应一个节点的多个请求。transaction ID 应当被编码为一个短的二进制字符串，比如 2 个字节，这样就可以对应 2^16 个请求
+2.y关键字: 它由一个字节组成，表明这个消息的类型。y 对应的值有三种情况
+    1) q 表示请求(请求Queries): q类型的消息它包含 2 个附加的关键字 q 和 a
+        1.1) 关键字 q: 是字符串类型，包含了请求的方法名字(get_peers/announce_peer/ping/find_node)
+        1.2) 关键字 a: 一个字典类型包含了请求所附加的参数(info_hash/id..)
+    2) r 表示回复(回复 Responses): 包含了返回的值。发送回复消息是在正确解析了请求消息的基础上完成的，包含了一个附加的关键字 r。关键字 r 是字典类型
+        2.1) id: peer节点id号或者下一跳DHT节点
+                2.2) nodes": ""
+                2.3) token: token
+    3) e 表示错误(错误 Errors): 包含一个附加的关键字 e，关键字 e 是列表类型
+        3.1) 第一个元素是数字类型，表明了错误码，当一个请求不能解析或出错时，错误包将被发送。下表描述了可能出现的错误码
+        201: 一般错误
+        202: 服务错误
+        203: 协议错误，比如不规范的包，无效的参数，或者错误的 toke
+        204: 未知方法
+        3.2) 第二个元素是字符串类型，表明了错误信息
+```
+- ping请求：  
+ping用于检测节点是否可连接，包含一个节点ID，回复也包含回复者的节点ID。  
+- find_node请求：  
+给定请求节点(被find_node的节点)的ID和目标ID,回复目标ID的info或者是可能节0点所在K桶的K个节点。  
+- get_peers请求：
+包含请求节点的ID和infohash,给出目标ID的info  
+- announce_peer请求：
+包含4个参数：  
+```
+1.id:包含请求节点的ID
+2.info_hash:包含torrent文件的info_hash
+3.port:表示peer正在下载的端口
+4.token:这里的token要与get_peers中得到的token相同才可以证明该announce_peer不是伪造的
+```
+相关链接:  
+[BEP_0005](http://www.bittorrent.org/beps/bep_0005.html)  
+
+3. DHT-Spider实现：  
+DHT这种P2P网络在对抗攻击与封锁的同时也有如下的缺点：  
+```
+1.伪造攻击: 有些不听话的用户可能会在DHT网络里捣乱，譬如说撒谎，明明自己不是奥巴马，却偏说自己是奥巴马，这样会误导其他人无法正常获取想要的资源
+2.嗅探攻击: 另外，用户在DHT网络里的隐私可能会被窃听，因为在DHT网络里跟其他用户交换资源的时候，难免会暴露自己的IP地址，所以别人就会知道你有什么资源，你在请求什么资源了。这也是目前DHT网络里一直存在的一个弱点
+```
+我编写的[DHT-Spider](https://github.com/LEXUGE/DHT-Spider)能够通过token和infohash的双重检查来解决第一种缺点。但目前无法解决第二种。  
+实际上，爬虫的主要思路是不断地主动find_node来扩充自己的路由表，然后积极回应get_peers和announce_peer,infohash的主要来源也是这两种请求。  
+
+4. BitTorrent文件编码与格式：  
+整个```.torrent```文件采用的是bencode加密，最主要的部分是info字段，是一个字典，包含了文件名，文件大小，infohash，以及sha1散列簇。torrent文件的核心也在此。  
+作为一个trackless的脚本，我们不需要添加其他的东西(announce等)，这样可以保证DHT的稳定性和隐蔽性。  
+值得注意的是：在编辑torrent文件时，请使用16进制编辑器(比如ghex)。  
+
+5. Peer Wire协议：  
+在BitTorrent中，节点的寻址通过DHT实现，但是，获取了IP:port之后，实际的数据交换需要Peer Wire协议。  
+- 握手：  
+Peer Wire协议是Peer之间的通信协议，通常由一个握手消息开始。  
+```<pstrlen><pstr><reserved><info_hash><peer_id>```  
+在BitTorrent协议的v1.0版本, pstrlen = 19, pstr = "BitTorrent protocol"，info_hash是上文中提到的磁力链接中的btih
+
+6. BitTorrent协议扩展与ut_metadata：  
+借助DHT的寻址以及Peer Wire的握手，接下来就可以获取metadata了(包含info字段)。  
+Metadata被分块，每个块有16KB(16384字节)，Metadata块从0开始索引，所有块的大小都是16KB，除了最后一个块可能比16KB小。
+- Extension头部：
+Metadata的扩展使用BEP_0010进行声明，在头部的m字典加入ut_metadata选项并制定metadata的字节数。  
+- Extension消息：
+这里的消息采用bencode编码，有三种:  
+```
+0.request(请求):
+请求消息并不在字典中附加任何关键字，这个消息的回复应当来自支持这个扩展的peer，是一个reject或者data消息，回复必须和请求所指出的片相同
+Peer必须保证它所发送的每个片都通过了infohash的检测。即直到peer获得了整个metadata并通过了infohash的验证，才能够发送片(即一个peer应该保证自己已经完整从其他peer中拷贝了一份相同的资源文件后，才能继续响应其他节点的拷贝请求)。Peers没有获得整个metadata时，对收到的所有metadata请求都必须直接回复reject消息
+{'msg_type': 0, 'piece': 0}
+d8:msg_typei0e5:piecei0ee
+这代表请求消息在请求metadata的第一片
+1.data
+这个data消息需要在字典中添加一个新的字段，"total_size".这个关键字段和extension头的"metadata_size"有相同的含义，这是一个整型
+Metadata片被添加到bencode字典后面，他不是字典的一部分，但是是消息的一部分(必须包括长度前缀)。
+如果这个片是metadata的最后一个片，他可能小于16KB。如果它不是metadata的最后一片，那大小必须是16KB
+{'msg_type': 1, 'piece': 0, 'total_size': 3425}
+d8:msg_typei1e5:piecei0e10:total_sizei34256eexxxxxxxx...
+x表示二进制数据(metadata)
+2.reject
+Reject消息没有附件的关键字。它的意思是peer没有请求的这个metadata片信息
+在客户端收到收到一定数目的消息后，可以通过拒绝请求消息来进行洪泛攻击保护。尤其在metadata的数目乘上一个因子时
+{'msg_type': 2, 'piece': 0}
+d8:msg_typei1e5:piecei0ee
+```
+- Extension支持交互：  
+根据BEP_0010的规定，扩展消息在Peer Wire之后发出，为一个bencode编码的字典：  
+```
+{
+    e:0,
+    ipv4:xxx,
+    ipv6:xxx,
+    complete_ago:1,
+    m:
+    {
+        upload_only:3,
+        lt_donthave:7,
+        ut_holepunch:4,
+        ut_metadata:2,
+        ut_pex:1,
+        ut_comment:6
+    },
+    matadata_size:45377,
+    p:33733,
+    reqq:255,
+    v:BitTorrent 7.9.3
+    yp:19616,
+    yourip:xxx
+}
+1.m:是一个字典，表示客户端支持的所有扩展以及每个扩展的编号
+    1) ut_pex:表示该客户端支持PEX(Peer Exchange)
+    2) ut_metadata表示支持BEP-0009(也就是交换种子文件的metadata)
+```
+通知交互完成之后，按["msg_type": 0, "piece": piece]的格式逐块向对方请求metadata,最后进行拼接形成info字段。
+
+7. 校验infohash&收尾：  
+这一步比较简单，直接对获得的metadata进行转字符串再进行sha1处理即可。  
+之后再与已有infohash进行比对。  
+最后对信息进行输出和存储。  
+
+最后，就完成了！  
+具体脚本使用指南参考我的项目，在此不再详述。  

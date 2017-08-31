@@ -3,6 +3,7 @@ layout: default
 title:  "Fedora 启动U盘制作和安装教程"
 date:   2016-08-26 7:45
 categories: jekyll update
+tags: [Linux,计算机技巧]
 ---
 >Fedora是一个不错的Linux发行版，它界面清爽，安装简洁，稳定性高，驱动自适应性能强。由社区开发维护，Red Hat公司资助。
 

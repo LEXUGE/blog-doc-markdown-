@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "使用mdk3+aircrack-ng攻击路由器"
 date:   2016-08-28 11:47
 categories: jekyll update
 tags: [Linux,网络]
+issueid: 34
 ---
 >mdk3是一款Linux下的终端网络攻击工具，需要配合强大的aircrack -ng使用  
 

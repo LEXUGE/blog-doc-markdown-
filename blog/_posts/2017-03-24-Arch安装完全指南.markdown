@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "Arch安装完全指南"
 date:   2017-03-24 17:34
 categories: jekyll update
 tags: [Linux,计算机技巧]
+issueid: 8
 ---
 [Arch Wiki](https://wiki.archlinux.org/index.php/Main_page)  
 [Arch官网](https://www.archlinux.org/)  

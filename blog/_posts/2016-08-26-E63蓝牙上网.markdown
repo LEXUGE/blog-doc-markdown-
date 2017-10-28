@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "E63蓝牙上网"
 date:   2016-08-26 14:04
 categories: jekyll update
 tags: [计算机技巧]
+issueid: 23
 ---
 >对于国行的E63来说，并不配备有Wi-Fi功能，所以，就得近肯能的使用其他的
 免费数据连接来代替这一功能，其中最棒的选择就是Bluetooth连接。但是，Bluetooth连接

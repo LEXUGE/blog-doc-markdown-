@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "为梦仰望"
 date:   2017-07-10 20:18
 categories: jekyll update
 tags: [随笔]
+issueid: 43
 ---
 No Fear In My Heart: <audio src="/music/No Fear In My Heart.mp3" controls="controls" loop="loop" preload="meta"></audio>  
 <br>

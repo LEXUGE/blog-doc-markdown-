@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "LEDIT代码详解&&移植指南"
 date:   2017-04-23 20:02
 categories: jekyll update
 tags: [编程,项目]
+issueid: 30
 ---
 
 > 伴随着LEDIT新版本的发布，代码发生了翻天覆地的重构。为了让使用者及改编者能更清晰地阅读和移植代码。特写此文。  

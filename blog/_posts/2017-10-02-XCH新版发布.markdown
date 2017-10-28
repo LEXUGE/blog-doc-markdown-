@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "XCH新版发布"
+date:   2017-10-02 10:00
+categories: jekyll update
+tags: [项目]
+issueid: 52
+---
+![](/image/XCH-shot-2.png)  
+
+<hr>
+<h3>相关链接</h3>
+- [XCH项目主页](https://github.com/LEXUGE/XCH)  
+- [XCH下载](https://lexuge.github.io/download/XCH.zip)  
+
+<hr>
+<h3>简介</h3>
+> XCH专为强大、稳定而生。强调灵活、快速、智能，带给你别样的求解体验。
+
+
+<hr>
+<h3>功能</h3>
+XCH更新后增加了许多功能：  
+- 化学方程式解析器
+- 语法检查
+- 智能纠错
+- SGN安全输入技术
+
+其中，化学方程式解析器具备以下特点：  
+- 不依赖元素周期表，自动学习新元素
+- 支持无限括号递归
+- 稳定性保护
+当求解失败时，会显示解析器的解析结果以供参考和排错。同时，智能纠错技术可以进一步提高输入效率。  
+
+<hr>
+<h3>安装</h3>
+您可以采用两种方式使用：  
+
+1. 获取编译完成的Linux x64版本
+2. 自行编译（需要GCC>=7.2支持）
+- 只需运行以下命令即可编译：`gcc -o XCH XCH.C -Wall`  
+
+注：因为代码中使用了GCC的内建函数检查溢出，所以请务必使用GCC（建议>=7.2）编译
+
+<hr>
+<h3>功能演示</h3>
+普通求解：  
+```
+XCH - Chemical Equation Balancer
+<> by LEXUGE
+Copyright (C) 2017 LEXUGE
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+[INPUT] Input the equation:
+As2O3+Zn+HCl=AsH3+ZnCl2+H2O
+[INPUT] Input the search depth:
+50
+[OUTPUT] 1 6 12 2 6 3
+```
+无限括号递归支持：  
+```
+XCH - Chemical Equation Balancer
+<> by LEXUGE
+Copyright (C) 2017 LEXUGE
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+[INPUT] Input the equation:
+O2(((O2)2)3)+Zn4(Fe(H2)4)2)=O+Zn2FeH8
+[INPUT] Input the search depth:
+50
+[OUTPUT] 1 1 14 2
+```
+智能纠错： 我们将第一例的方程式中部分分子式前加入错误/正确的系数  
+```
+XCH - Chemical Equation Balancer
+<> by LEXUGE
+Copyright (C) 2017 LEXUGE
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+[INPUT] Input the equation:
+As2O3+7Zn+12HCl=AsH3+ZnCl2+123H2O
+[INPUT] Input the search depth:
+50
+[OUTPUT] 1 6 12 2 6 3
+```
+可以看到，XCH识别并规避了它们。这项技术可以让您求解“补全化学式系数”这类题时大胆输入，无需顾忌。  
+语法检查：  
+```
+XCH - Chemical Equation Balancer
+<> by LEXUGE
+Copyright (C) 2017 LEXUGE
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+[INPUT] Input the equation:
+H2O=((H2)+O2   
+[INPUT] Input the search depth:
+10
+[ERROR] Illegal equation.
+```
+XCH对括号进行了匹配，发现了错误。XCH的语法检查还会检查是否具有`=`以及其个数，是否存在非法字符等。

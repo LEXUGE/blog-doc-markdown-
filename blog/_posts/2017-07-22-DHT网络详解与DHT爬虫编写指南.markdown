@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "DHT网络详解与DHT爬虫编写指南"
 date:   2017-07-22 14:52
 categories: jekyll update
 tags: [网络,编程,Python]
+issueid: 11
 ---
 ![](/image/DHT-Spider.png)  
 <hr>

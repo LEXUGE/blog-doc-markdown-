@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "幕后 第一章"
 date:   2017-07-04 13:34
 categories: jekyll update
 tags: [幕后系列,随笔]
+issueid: 26
 ---
 > 我现在做的事情，要么毫无意义，要么可能成为牛顿以后物理学上最大的发现。  
 ——马克思·普朗克  

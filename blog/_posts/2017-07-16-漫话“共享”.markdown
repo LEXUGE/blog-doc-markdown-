@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "漫话“共享”"
 date:   2017-07-16 21:01
 categories: jekyll update
 tags: [随笔]
+issueid: 1
 ---
 ![](/image/共享单车.jpg)
 <br>

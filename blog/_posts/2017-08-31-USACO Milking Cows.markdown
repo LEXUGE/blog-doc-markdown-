@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "USACO Milking Cows"
 tags: [编程,算法,OI,USACO]
 date:   2017-08-31 10:26
 categories: jekyll update
+issueid: 9
 ---
 > USACO Milking Cows题解分析
 

@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "幕后 第五章"
 date:   2017-08-31 14:04
 categories: jekyll update
 tags: [幕后系列,随笔]
+issueid: 18
 ---
 坐标：中国东北-黑龙江鸭绿江沿岸某村庄 地球纪元2036年夏  
 这天，老大照旧出来打水。突然，不知怎么，整个地面一晃，老大一个不小心摔在了地上。  

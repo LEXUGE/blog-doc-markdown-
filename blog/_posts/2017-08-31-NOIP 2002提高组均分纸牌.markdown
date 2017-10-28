@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "NOIP 2002提高组均分纸牌"
 tags: [编程,算法,OI]
 date:   2017-08-31 09:18
 categories: jekyll update
+issueid: 17
 ---
 > NOIP2002提高组均分纸牌题解分析  
 

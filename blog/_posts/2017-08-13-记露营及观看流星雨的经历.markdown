@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "记露营及观看流星雨的经历"
 tags: [生活,随笔]
 date:   2017-08-13 16:51
 categories: jekyll update
+issueid: 33
 ---
 ![](/image/M-Shower.jpg)
 <br>

@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "向死而生，直面困难"
 date:   2017-06-25 10:05
 categories: jekyll update
 tags: [随笔]
+issueid: 40
 ---
 
 

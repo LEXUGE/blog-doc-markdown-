@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "为你，千千万万遍。"
 date:   2017-02-23 18:17
 categories: jekyll update
 tags: [随笔]
+issueid: 5
 ---
 
 

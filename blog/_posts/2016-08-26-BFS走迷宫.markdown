@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "BFS走迷宫"
 date:   2016-08-26 8:54
 categories: jekyll update
 tags: [算法,C]
+issueid: 38
 ---
 代码如下：
 

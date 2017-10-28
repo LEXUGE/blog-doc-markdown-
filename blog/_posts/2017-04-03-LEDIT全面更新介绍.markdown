@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "LEDIT全面更新介绍"
 date:   2017-04-03 20:03
 categories: jekyll update
 tags: [编程,项目]
+issueid: 2
 ---
 > 今天，我对LEDIT进行了总计长达9小时的代码重构，将数据结构从二维数组迁移到更为便于管理的一维数组上。终于实现了基本编辑器的功能：读入，保存，编辑以及简易的加密功能。  
 

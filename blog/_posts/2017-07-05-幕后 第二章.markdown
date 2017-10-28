@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "幕后 第二章"
 date:   2017-07-05 13:31
 categories: jekyll update
 tags: [幕后系列,随笔]
+issueid: 31
 ---
 坐标：GN-z11星系-GNR-《宇宙》与S-M系统控制中心 时间：GN纪元后世代26941年  
 S-M的设计和维护团队，《宇宙》系统的设计团队，以及元首一同在控制中心的会议室中。  

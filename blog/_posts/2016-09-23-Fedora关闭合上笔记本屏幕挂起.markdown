@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "Fedora关闭合上笔记本屏幕挂起"
 date:   2016-09-23 17:38
 categories: jekyll update
 tags: [Linux,计算机技巧]
+issueid: 37
 ---
 与众多的Linux版本一样，因为内核的缘故，Fedora笔记本在合上屏幕时会自动挂起，很有可能无法唤醒。  
 如何解决这个问题呢？  

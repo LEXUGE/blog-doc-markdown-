@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "Python有道词典终端版"
 date:   2017-01-30 15:17
 categories: jekyll update
 tags: [Python,Linux,编程]
+issueid: 39
 ---
 为提高作业工作效力，我运用有道词典API与Python编写了一个小程序  
 输入英文，显示各种解释，直到输入```lexuge```退出  

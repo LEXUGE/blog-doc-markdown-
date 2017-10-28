@@ -5,37 +5,37 @@
 layout: default
 ---
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<ul class="pagination">
   {% if paginator.previous_page %}
   {% if paginator.previous_page == 1%}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
   {% else %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}/">&laquo; Prev</a>
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}/">&laquo;</a></li>
   {% endif %}
   {% else %}
-     <span>&laquo; Prev</span>
+     <li class="disabled"><a href="#">&laquo;</a></li>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-      <em>{{ page }}</em>
+      <li class="active"><a href="#">{{ page }}</a></li>
     {% elsif page == 1 %}
-      <a href="/">{{ page }}</a>
+      <li><a href="/">{{ page }}</a></li>
     {% elsif page == paginator.total_pages %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a>
+      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a></li>
     {% elsif paginator.previous_page and page == paginator.previous_page%}
-         <em>...</em><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a>
+         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a></li>
     {% elsif paginator.next_page and page == paginator.next_page%}
-         <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a><em>...</em>
+         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a><li>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}/">Next &raquo;</a>
+    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}/">&raquo;</a></li>
   {% else %}
-    <span>Next &raquo;</span>
+    <li class="disabled"><a href="#">&raquo;</a></li>
   {% endif %}
-</div>
+</ul>
 {% endif %}
 
 {% for post in paginator.posts %}
@@ -49,42 +49,42 @@ layout: default
   <div class="content">
     {{ post.excerpt }}
   </div>
-  <h2><b><a href="{{ post.url }}">......</a></b></h2>
+  <a class="btn btn-primary btn-sm" style="color:white;" href="{{ post.url }}">阅读全文</a>
   <hr size=5 noshade="noshade"/>
   <br>
   <br>
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
+<ul class="pagination">
   {% if paginator.previous_page %}
   {% if paginator.previous_page == 1%}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
   {% else %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}/">&laquo; Prev</a>
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}/">&laquo;</a></li>
   {% endif %}
   {% else %}
-     <span>&laquo; Prev</span>
+     <li class="disabled"><a href="#">&laquo;</a></li>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-      <em>{{ page }}</em>
+      <li class="active"><a href="#">{{ page }}</a></li>
     {% elsif page == 1 %}
-      <a href="/">{{ page }}</a>
+      <li><a href="/">{{ page }}</a></li>
     {% elsif page == paginator.total_pages %}
-      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a>
+      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a></li>
     {% elsif paginator.previous_page and page == paginator.previous_page%}
-         <em>...</em><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a>
+         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a></li>
     {% elsif paginator.next_page and page == paginator.next_page%}
-         <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a><em>...</em>
+         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}/">{{ page }}</a><li>
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}/">Next &raquo;</a>
+    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}/">&raquo;</a></li>
   {% else %}
-    <span>Next &raquo;</span>
+    <li class="disabled"><a href="#">&raquo;</a></li>
   {% endif %}
-</div>
+</ul>
 {% endif %}

@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "普法战争"
 date:   2017-03-05 11:32
 categories: jekyll update
 tags: [随笔]
+issueid: 3
 ---
 > 普法战争是欧洲传统意义上的一场新旧帝国之争，决定着欧洲的霸主是谁的问题。  
 这场战争的成因并不是法国的主动进攻，很大一部分是德国（普鲁士）制造争端。德国人希望以此团结德意志名族。  

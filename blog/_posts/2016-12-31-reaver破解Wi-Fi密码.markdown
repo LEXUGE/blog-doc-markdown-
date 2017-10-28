@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "reaver破解Wi-Fi密码"
 date:   2016-12-31 17:35
 categories: jekyll update
 tags: [网络,Linux]
+issueid: 27
 ---
 [reaver最新版主页](https://github.com/t6x/reaver-wps-fork-t6x)  
 [pixiewps主页](https://github.com/wiire/pixiewps)  

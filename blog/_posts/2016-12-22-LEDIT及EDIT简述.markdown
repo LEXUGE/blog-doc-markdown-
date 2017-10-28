@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "LEDIT及EDIT简述"
 date:   2016-12-22 19:40
 categories: jekyll update
 tags: [项目,编程]
+issueid: 22
 ---
 **LEDIT及EDIT简述**  
 ![](/image/LEDIT宣传.png)  

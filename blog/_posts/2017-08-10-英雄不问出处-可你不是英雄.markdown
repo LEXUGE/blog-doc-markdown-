@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "英雄不问出处——可你不是英雄"
 date:   2017-08-10 18:33
 tags: [生活,随笔]
 categories: jekyll update
+issueid: 15
 ---
 > 这几天与民科展开了激烈的论战，除了接受的教育水平低外，我还发现了许多『有趣』的社会现象。
 

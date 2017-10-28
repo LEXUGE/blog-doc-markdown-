@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "USACO Broken Necklace"
 tags: [编程,算法,OI,USACO]
 date:   2017-08-31 11:14
 categories: jekyll update
+issueid: 16
 ---
 > USACO Broken Necklace题解分析
 

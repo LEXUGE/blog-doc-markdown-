@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "我的Coding之路"
 date:   2017-08-01 16:03
 categories: jekyll update
 tags: [随笔,编程]
+issueid: 47
 ---
 ![](/image/programmer-min.jpg)
 <hr>

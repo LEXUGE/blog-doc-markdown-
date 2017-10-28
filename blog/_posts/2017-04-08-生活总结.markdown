@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "生活总结"
 date:   2017-04-08 17:41
 categories: jekyll update
 tags: [生活,随笔]
+issueid: 32
 ---
 > 回顾过去，展望未来！  
 过去的日子回不来，但可以回望。好多年过去了，不论是从计划上还是技术上，抑或是感悟，我一直在发生巨大的变化。  

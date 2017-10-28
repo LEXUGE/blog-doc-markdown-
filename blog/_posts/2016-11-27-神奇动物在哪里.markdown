@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "神奇动物在哪里"
 date:   2016-11-27 13:43
 categories: jekyll update
 tags: [随笔]
+issueid: 28
 ---
 ![](/image/神奇动物在哪里海报.jpg)  
 

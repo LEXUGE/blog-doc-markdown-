@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "GAMEOX详述"
 date:   2016-12-17 13:39
 categories: jekyll update
 tags: [项目,编程]
+issueid: 14
 ---
 **GAMEOX详述**  
 Copyright ("2015-2017") LEXUGE  

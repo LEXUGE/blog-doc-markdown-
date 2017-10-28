@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "XCH - 化学方程式配平程序"
 date:   2017-03-12 16:24
 categories: jekyll update
 tags: [项目,编程]
+issueid: 41
 ---
 本软件遵守[GPL协议](http://www.gnu.org/licenses/gpl.txt)发布  
 本程序可以用来进行化学方程式配平，下载地址见About页面  

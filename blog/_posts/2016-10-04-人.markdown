@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "人"
 date:   2016-10-04 16:10
 categories: jekyll update
 tags: [随笔]
+issueid: 44
 ---
 - 纠正  
 很多时候，生活中总有人会提出我们看来亦或愚蠢亦或无知乃至无可救药的想法、意见。  

@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: post
 title:  "在Linux上使用VMware安装OS X"
 date:   2017-02-25 22:56
 categories: jekyll update
 tags: [计算机技巧,Linux]
+issueid: 46
 ---
 ![](/image/OS X启动.png)  
 ![](/image/OS X.png)  
